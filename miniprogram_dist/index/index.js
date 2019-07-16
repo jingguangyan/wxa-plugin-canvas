@@ -193,7 +193,7 @@ const handle = {
           let line = 1;
           for (let i = 0; i <= text.length - 1 ; i++) {  // 将文字转为数组，一行文字一个元素
             fillText = fillText + text[i];
-            if (this.toRpx(this.ctx.measureText(fillText).width) >= width) {
+            if (this.toRpx(this.ctx.measureText(fillText).width / this.pixelRatio) >= width) {
               if (line === lineNum) {
                 if (i !== text.length - 1) {
                   fillText = fillText.substring(0, fillText.length - 1) + '...';
